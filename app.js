@@ -23,8 +23,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(sassMiddleware({
-  src: __dirname,
-  dest: path.join(__dirname, 'public'),
+  src: path.join(__dirname, 'public'),
   debug: true,
   outputStyle: 'compressed'
 }));
